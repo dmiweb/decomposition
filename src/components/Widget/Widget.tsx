@@ -1,11 +1,12 @@
-/**
- * Компонент отображает виджет списка любого контента
- */
 type WidgetProps = {
   className: string,
   title?: string,
   children: JSX.Element | JSX.Element[]
 }
+
+/**
+ * Компонент отображает виджет списка любого контента
+ */
 
 const Widget = ({className, title, children}: WidgetProps): JSX.Element => {
   return (

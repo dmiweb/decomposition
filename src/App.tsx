@@ -13,7 +13,7 @@ import Button from './components/Button/Button';
 import InputText from './components/InputText/InputText';
 import ExampleRequest from './components/WidgetSearch/ExampleRequest';
 import AdBlock from './components/AdBlock/AdBlock';
-import Widget from './components/Widget/Widjet';
+import Widget from './components/Widget/Widget';
 
 function App() {
   return (

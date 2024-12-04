@@ -1,8 +1,6 @@
 import './App.css';
 import img from './assets/react.svg';
-import WidgetNews from './components/WidgetNews/WidgetNews';
-import UpdateNewsDate from './components/WidgetNews/UpdateNewsDate';
-import WidgetSearch from './components/WidgetSearch/WidgetSearch';
+import UpdateNewsDate from './components/News/UpdateNewsDate';
 import Logo from './components/Logo/Logo';
 import Menu from './components/Menu/Menu';
 import MenuItem from './components/Menu/MenuItem';
@@ -15,13 +13,13 @@ import Button from './components/Button/Button';
 import InputText from './components/InputText/InputText';
 import ExampleRequest from './components/WidgetSearch/ExampleRequest';
 import AdBlock from './components/AdBlock/AdBlock';
-import WidgetProject from './components/WidgetProject/WidjetProject';
+import Widget from './components/Widget/Widjet';
 
 function App() {
   return (
     <>
       <header className='header'>
-        <WidgetNews>
+        <Widget className="widget-news">
           <Menu className={"widget-news__menu"}>
             <MenuItem className={"widget-news__menu-item"}>Сейчас в СМИ</MenuItem>
             <MenuItem className={"widget-news__menu-item"}>В Германии</MenuItem>
@@ -66,7 +64,7 @@ function App() {
               <Link className={"list-news__link"} url={"#"}>
                 <Icon className={"list-news__icon"} url={img} />
                 <Text className={"list-news__text"}>
-                  На Украине призвали создать ракеты для удара по Москве 
+                  На Украине призвали создать ракеты для удара по Москве
                 </Text>
               </Link>
             </Item>
@@ -89,15 +87,15 @@ function App() {
               </Link>
             </Item>
           </ListItems>
-        </WidgetNews>
 
-        <AdBlock className='ad-block'>
-          <div className='ad-block__top'>Ad</div>
-        </AdBlock>
+          <AdBlock className='ad-block'>
+            <div className='ad-block__top'>Ad</div>
+          </AdBlock>
+        </Widget>
       </header>
 
       <section className='section'>
-        <WidgetSearch>
+        <Widget className='widget-search'>
           <Menu className={"widget-search__menu"}>
             <MenuItem className={"widget-search__menu-item"}>Видео</MenuItem>
             <MenuItem className={"widget-search__menu-item"}>Картинки</MenuItem>
@@ -119,11 +117,11 @@ function App() {
           <AdBlock className='ad-block'>
             <div className='ad-block__center'>Ad</div>
           </AdBlock>
-        </WidgetSearch>
+        </Widget>
       </section>
 
       <footer className='footer'>
-        <WidgetProject title={"Погода"}>
+        <Widget className='widget-project' title={"Погода"}>
           <div className='weather'>
             <div className='weather__now'>
               <Icon className={"weather__now-icon"} url={img} />
@@ -134,9 +132,9 @@ function App() {
               <Text className={"weather__today-afternoon"}>днем +20</Text>
             </div>
           </div>
-        </WidgetProject>
+        </Widget>
 
-        <WidgetProject title={"Посещаемое"}>
+        <Widget className='widget-project' title={"Посещаемое"}>
           <div className="visited">
             <Link className="visited__link" url="#">
               <Text className="visited__item">Недвижимость - </Text>
@@ -151,17 +149,17 @@ function App() {
               <Text className="visited__description">привод 4х4 до 500 000</Text>
             </Link>
           </div>
-        </WidgetProject>
+        </Widget>
 
-        <WidgetProject title={"Карта Германии"}>
+        <Widget className='widget-project' title={"Карта Германии"}>
           <div className='map-of-germany'>
             <Link className="map-of-germany__link" url="#">
               <Text className="map-of-germany__item">Расписания</Text>
             </Link>
           </div>
-        </WidgetProject>
+        </Widget>
 
-        <WidgetProject title={"Телепрограмма"}>
+        <Widget className='widget-project' title={"Телепрограмма"}>
           <div className='tv-program'>
             <Link className="tv-program__link" url="#">
               <Text className="tv-program__time">02:00</Text>
@@ -179,28 +177,27 @@ function App() {
               <Text className="tv-program__description">Первый</Text>
             </Link>
           </div>
-        </WidgetProject>
+        </Widget>
 
-        <WidgetProject title={"Эфир"}>
+        <Widget className='widget-project' title={"Эфир"}>
           <div className='ether'>
             <Link className="ether__link" url="#">
-              <Icon className={"ether-icon"} url={img}/>
+              <Icon className={"ether-icon"} url={img} />
               <Text className="ether__item">Управление как искусство</Text>
               <Text className="ether__description">Успех</Text>
             </Link>
             <Link className="ether__link" url="#">
-              <Icon className={"ether-icon"} url={img}/>
+              <Icon className={"ether-icon"} url={img} />
               <Text className="ether__item">Ночь. Мир в это время</Text>
               <Text className="ether__description">earthTV</Text>
             </Link>
             <Link className="ether__link" url="#">
-              <Icon className={"ether-icon"} url={img}/>
+              <Icon className={"ether-icon"} url={img} />
               <Text className="ether__item">Андрей Возн...</Text>
               <Text className="ether__description">Совершенно секретно</Text>
             </Link>
           </div>
-
-        </WidgetProject>
+        </Widget>
       </footer>
     </>
   )

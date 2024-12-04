@@ -1,6 +1,4 @@
 .header {
-  /* display: flex; */
-  /* gap: 40px */
   position: relative;
 }
 
@@ -69,11 +67,6 @@
   padding: 0;
   list-style: none;
 }
-
-
-
-
-/* .widget-news {} */
 
 .widget-news__menu {
   display: flex;
@@ -182,8 +175,6 @@
   font-size: 0.8em;
 }
 
-/* .example-request__title {} */
-
 .example-request__random-request {
   color: #696969;
   cursor: pointer;
@@ -198,7 +189,6 @@
 
 .widget-project {
   width: 100%;
-  height: 100%;
   margin-bottom: 20px;
   page-break-inside: avoid;
   break-inside: avoid;
